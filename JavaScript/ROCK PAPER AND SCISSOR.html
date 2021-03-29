@@ -1,0 +1,64 @@
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+var e=0;
+while(true){
+	var a =prompt("enter your choice");
+	var g=a.toUpperCase();
+	console.log(g);
+	if(!(g ==="ROCK"|| g ==="PAPER" || g ==="SCISSOR")){
+		alert("invalid input");
+		a=prompt("ENTER AGAIN");
+	}else{
+		var x=["ROCK","PAPER","SCISSOR"];
+		var d=x[Math.floor(Math.random()*3)];
+		var f;
+		if( g ===x[0] && d ===x[2]){
+			e=e+10;
+			alert("you won . Your Score is:"+e);
+			f= confirm("do you want to play again");
+			if(!f){
+					alert("Thanks for playing")
+					break;
+			}
+		}else if( g === x[1] && d === x[0]){
+			e=e+10;
+			alert("you won . Your Score is:"+e);
+			f= confirm("do you want to play again");
+			if(!f){
+					alert("Thanks for playing")
+					break;
+			}
+		}else if( g === x[2] && d === x[1]){
+			e=e+10;
+			alert("you won . Your Score is:"+e);
+			f= confirm("do you want to play again");
+			if(!f){
+					alert("Thanks for playing")
+					break;
+			}
+		}else if( g === d){
+			e=e+5;
+			alert(" Match tied . Your Score is:"+e);
+			f= confirm("do you want to play again");
+			if(!f){
+					alert("Thanks for playing")
+					break;
+			}
+		}
+		else{
+			e=e-10;
+			alert("you Lost . your score is:"+e);
+			f= confirm("do you want to play again");
+			if (!f){
+				alert("Thanks for playing")
+				break;
+			}
+		}
+	}
+}
+</script>
+</body>
+</html>
