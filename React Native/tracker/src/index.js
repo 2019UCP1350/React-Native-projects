@@ -4,7 +4,7 @@ const express=require('express');
 const mongoose=require('mongoose');
 const authRoutes=require('./routes/authroutes');
 const bodyParser=require('body-parser'); // module to convert the json data into javascript object
-const mongoUri="mongodb+srv://admin:3002826917@cluster0.najxd.mongodb.net/<dbname>?retryWrites=true&w=majority";
+const mongoUri="mongodb+srv://admin:<password>@cluster0.najxd.mongodb.net/<dbname>?retryWrites=true&w=majority";
 const reqAuth=require('./middlewares/reqAuth');
 const trackRoutes=require('./routes/trackRoutes');
 mongoose.connect(mongoUri,{         // creating a mongoose instance
